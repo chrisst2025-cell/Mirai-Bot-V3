@@ -1,0 +1,8 @@
+node_modules/
+cookie.txt
+utils/data/fbstate.json
+includes/data.sqlite
+Fca_Database
+*.txt
+fca-config.json
+appstate.json
