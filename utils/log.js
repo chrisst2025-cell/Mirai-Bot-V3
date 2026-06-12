@@ -1,5 +1,5 @@
-const chalk = require('chalk')
-const gradient = require('gradient-string')
+const chalk = require('chalk').default
+const gradient = require('gradient-string').default
 const themes = [
   'blue',
   'dream2',
