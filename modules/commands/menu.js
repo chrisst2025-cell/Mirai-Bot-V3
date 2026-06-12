@@ -2,9 +2,9 @@ module.exports.config = {
   name: 'menu',
   version: '1.2.0',
   hasPermssion: 0,
-  credits: 'DC-Nam & DongDev',
+  credits: 'DC-Nam & DongDev (Optimized by G3K)',
   description: 'Xem danh sách nhóm lệnh, thông tin lệnh',
-  commandCategory: 'Hệ thống',
+  commandCategory: 'Hệ Thống',
   usages: '[...name commands|all]',
   cooldowns: 5,
   envConfig: {

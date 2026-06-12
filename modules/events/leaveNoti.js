@@ -18,9 +18,6 @@ module.exports.onLoad = () => {
   const path = join(__dirname, 'cache', 'leaveGif')
   if (!existsSync(path)) mkdirSync(path, { recursive: true })
 
-  const path2 = join(__dirname, 'cache', 'leaveGif', 'randomgif')
-  if (!existsSync(path2)) mkdirSync(path2, { recursive: true })
-
   return
 }
 module.exports.run = async ({ api, event, Users, Threads }) => {

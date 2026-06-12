@@ -7,7 +7,7 @@ module.exports.config = {
   hasPermssion: 2,
   credits: 'DungUwU mod by DongDev',
   description: 'duyệt box dùng bot xD',
-  commandCategory: 'Admin',
+  commandCategory: 'Nhóm',
   cooldowns: 5,
   prefix: true,
 }

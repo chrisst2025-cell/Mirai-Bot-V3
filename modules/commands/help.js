@@ -6,13 +6,13 @@ this.config = {
   hasPermssion: 0,
   credits: 'DC-Nam',
   description: 'Xem danh sách lệnh và info',
-  commandCategory: 'Hệ thống',
+  commandCategory: 'Hệ Thống',
   usages: '[tên lệnh/all]',
   cooldowns: 5,
   images: [],
 }
 
-this.run = async function ({ api, event, args }) {
+this.run = async function ({ api, event, args, Users }) {
   const { threadID: tid, messageID: mid } = event
   var type = !args[0] ? '' : args[0].toLowerCase()
   var msg = '',
@@ -69,7 +69,13 @@ this.run = async function ({ api, event, args }) {
     for (const cmd of array) {
       msg += `│\n│ ${cmd.cmdCategory.toUpperCase()}\n├────────⭔\n│ Tổng lệnh: ${cmd.nameModule.length} lệnh\n│ ${cmd.nameModule.join(', ')}\n├────────⭔\n`
     }
-    msg += `📝 Tổng số lệnh: ${cmds.size} lệnh\n👤 Tổng số admin bot: ${admin.length}\n→ Tên Bot: ${NameBot}\n🔰 Phiên bản: ${version}\n→ Admin: Phạm Minh Đồng\n📎 Link: ${global.config.FACEBOOK_ADMIN}\n${prefix}help + tên lệnh để xem chi tiết\n${prefix}help + all để xem tất cả lệnh`
+    let adminName = 'Admin'
+    try {
+      if (admin && admin.length > 0) {
+        adminName = await Users.getNameUser(admin[0])
+      }
+    } catch {}
+    msg += `📝 Tổng số lệnh: ${cmds.size} lệnh\n👤 Tổng số admin bot: ${admin.length}\n→ Tên Bot: ${NameBot}\n🔰 Phiên bản: ${version}\n→ Admin: ${adminName}\n📎 Link: ${global.config.FACEBOOK_ADMIN}\n${prefix}help + tên lệnh để xem chi tiết\n${prefix}help + all để xem tất cả lệnh`
     return api.sendMessage(`╭─────────────⭓\n${msg}`, tid)
   }
 

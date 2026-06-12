@@ -4,7 +4,7 @@ module.exports.config = {
   hasPermssion: 1,
   credits: 'Mirai Team',
   description: 'tag toàn bộ thành viên',
-  commandCategory: 'Hệ thống',
+  commandCategory: 'Hệ Thống',
   usages: '[Text]',
   cooldowns: 80,
 }

@@ -1,30 +1,38 @@
 module.exports.config = {
   name: 'gỡ',
-  version: '1.0.0',
+  version: '1.0.1',
   hasPermssion: 0,
-  credits: 'HungCatMoi',
-  description: 'Gỡ tin nhắn của Bot',
-  commandCategory: 'Nhóm',
+  credits: 'Mirai Team',
+  description: 'Gỡ tin nhắn của bot',
+  commandCategory: 'Hệ Thống',
   usages: 'gỡ',
-  usePrefix: false,
-  cooldowns: 10,
-  dependencies: [],
+  cooldowns: 0,
 }
 
-module.exports.run = async ({ api, event }) => {
-  if (!event.messageReply) {
-    return
-  }
-  if (event.type !== 'message_reply') {
-    return api.sendMessage('❌ Bạn cần reply tin nhắn bot để gỡ.', event.threadID, event.messageID)
-  }
-  if (event.messageReply.senderID !== api.getCurrentUserID()) {
-    return api.sendMessage('⚠️ Tin nhắn này không phải do bot gửi.', event.threadID, event.messageID)
-  }
+module.exports.languages = {
+  vi: {
+    returnCant: 'Không thể gỡ tin nhắn của người khác.',
+    missingReply: 'Hãy reply tin nhắn cần gỡ.',
+  },
+  en: {
+    returnCant: "Can't to unsend message from other user.",
+    missingReply: 'Reply to the message you want to unsend.',
+  },
+}
 
-  return api.unsendMessage(event.messageReply.messageID, event.threadID, (err) => {
-    if (err) {
-      return api.sendMessage('⚠️ Đã xảy ra lỗi khi gỡ tin nhắn.', event.threadID, event.messageID)
-    }
-  })
+module.exports.run = ({ api, event, getText }) => {
+  if (event.messageReply.senderID !== api.getCurrentUserID())
+    return api.sendMessage(getText('returnCant'), event.threadID, event.messageID)
+  if (event.type !== 'message_reply')
+    return api.sendMessage(getText('missingReply'), event.threadID, event.messageID)
+  return api.unsendMessage(
+    event.messageReply.messageID,
+    typeof event !== 'undefined'
+      ? event.threadID
+      : typeof e !== 'undefined'
+        ? e.threadID
+        : typeof _ !== 'undefined'
+          ? _.threadID
+          : ''
+  )
 }

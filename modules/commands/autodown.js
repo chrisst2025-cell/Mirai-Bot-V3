@@ -4,7 +4,7 @@ const path = require('node:path')
 const { pipeline } = require('node:stream/promises')
 
 const CACHE_DIR = path.join(__dirname, 'cache')
-const STATE_FILE = path.join(__dirname, 'data', 'autodown_state.json')
+const STATE_FILE = path.join(__dirname, 'data', 'config', 'autodown_state.json')
 
 fs.ensureDirSync(CACHE_DIR)
 

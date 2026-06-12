@@ -118,7 +118,16 @@ module.exports.run = async ({ api, event, args, Users }) => {
       threadID,
       (_err, info) =>
         setTimeout(() => {
-          api.unsendMessage(info.messageID, threadID)
+          api.unsendMessage(
+            info.messageID,
+            typeof event !== 'undefined'
+              ? event.threadID
+              : typeof e !== 'undefined'
+                ? e.threadID
+                : typeof _ !== 'undefined'
+                  ? _.threadID
+                  : ''
+          )
         }, delayUnsend * 1000)
     )
   } else {
@@ -132,7 +141,16 @@ module.exports.run = async ({ api, event, args, Users }) => {
         threadID,
         (_err, info) =>
           setTimeout(() => {
-            api.unsendMessage(info.messageID, threadID)
+            api.unsendMessage(
+              info.messageID,
+              typeof event !== 'undefined'
+                ? event.threadID
+                : typeof e !== 'undefined'
+                  ? e.threadID
+                  : typeof _ !== 'undefined'
+                    ? _.threadID
+                    : ''
+            )
           }, delayUnsend * 1000)
       )
     } else {
@@ -143,7 +161,16 @@ module.exports.run = async ({ api, event, args, Users }) => {
         threadID,
         (_err, info) =>
           setTimeout(() => {
-            api.unsendMessage(info.messageID, threadID)
+            api.unsendMessage(
+              info.messageID,
+              typeof event !== 'undefined'
+                ? event.threadID
+                : typeof e !== 'undefined'
+                  ? e.threadID
+                  : typeof _ !== 'undefined'
+                    ? _.threadID
+                    : ''
+            )
           }, delayUnsend * 1000)
       )
     }

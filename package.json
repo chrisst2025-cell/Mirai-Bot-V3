@@ -14,17 +14,21 @@
   },
   "author": "DongDev",
   "dependencies": {
+    "@distube/ytdl-core": "^4.16.12",
     "@dongdev/fca-unofficial": "^4.0.3",
     "axios": "^1.17.0",
     "canvas": "^3.2.3",
     "chalk": "^4.1.2",
     "fs-extra": "^11.3.5",
     "gradient-string": "^2.0.2",
+    "image-downloader": "^4.3.0",
     "moment-timezone": "^0.6.2",
     "node-cron": "^4.2.1",
+    "request": "^2.88.2",
     "sequelize": "^6.37.8",
     "sqlite3": "^6.0.1",
-    "string-similarity": "^4.0.4"
+    "string-similarity": "^4.0.4",
+    "youtube-search-api": "^2.0.1"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.3.13"

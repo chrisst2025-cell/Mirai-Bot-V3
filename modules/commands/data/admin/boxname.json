@@ -1,0 +1,26 @@
+[
+  {
+    "boxid": "7978051062222740",
+    "boxname": true,
+    "username": false,
+    "avtbox": false
+  },
+  {
+    "boxid": "7231570333619708",
+    "boxname": true,
+    "username": false,
+    "avtbox": true
+  },
+  {
+    "boxid": "8716844248362326",
+    "boxname": true,
+    "username": false,
+    "avtbox": false
+  },
+  {
+    "boxid": "24261798620124748",
+    "boxname": false,
+    "username": false,
+    "avtbox": false
+  }
+]

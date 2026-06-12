@@ -4,7 +4,7 @@ module.exports.config = {
   credits: 'ManhG',
   hasPermssion: 3,
   description: '[Ban/Unban/Remove] List thread bot đã tham gia',
-  commandCategory: 'Hệ thống',
+  commandCategory: 'Nhóm',
   images: [],
   usages: '[số trang/all]',
   cooldowns: 5,
@@ -47,7 +47,17 @@ module.exports.handleReply = async ({ api, event, Threads, handleReply }) => {
               api.sendMessage(
                 ` [ 𝐌𝐎𝐃𝐄 ] - 𝗧𝗵𝘂̛̣𝗰 𝘁𝗵𝗶 𝗯𝗮𝗻 «\n(true/false) «\n\n ${msg}`,
                 threadID,
-                () => api.unsendMessage(handleReply.messageID, threadID)
+                () =>
+                  api.unsendMessage(
+                    handleReply.messageID,
+                    typeof event !== 'undefined'
+                      ? event.threadID
+                      : typeof e !== 'undefined'
+                        ? e.threadID
+                        : typeof _ !== 'undefined'
+                          ? _.threadID
+                          : ''
+                  )
               )
             )
         )
@@ -78,7 +88,16 @@ module.exports.handleReply = async ({ api, event, Threads, handleReply }) => {
           () =>
             api.sendMessage(`${global.data.botID}`, () =>
               api.sendMessage(`» [ 𝐌𝐎𝐃𝐄 ] - 𝗧𝗵𝘂̛̣𝗰 𝘁𝗵𝗶 𝘂𝗻𝗯𝗮𝗻 «(true/false)\n\n${msg}`, threadID, () =>
-                api.unsendMessage(handleReply.messageID, threadID)
+                api.unsendMessage(
+                  handleReply.messageID,
+                  typeof event !== 'undefined'
+                    ? event.threadID
+                    : typeof e !== 'undefined'
+                      ? e.threadID
+                      : typeof _ !== 'undefined'
+                        ? _.threadID
+                        : ''
+                )
               )
             )
         )
@@ -104,7 +123,16 @@ module.exports.handleReply = async ({ api, event, Threads, handleReply }) => {
           () =>
             api.sendMessage(`${global.data.botID}`, () =>
               api.sendMessage(`[ 𝐌𝐎𝐃𝐄 ] - 𝘁𝗵𝘂̛̣𝗰 𝘁𝗵𝗶 𝗼𝘂𝘁\n(true/false)\n\n${msg} `, threadID, () =>
-                api.unsendMessage(handleReply.messageID, threadID)
+                api.unsendMessage(
+                  handleReply.messageID,
+                  typeof event !== 'undefined'
+                    ? event.threadID
+                    : typeof e !== 'undefined'
+                      ? e.threadID
+                      : typeof _ !== 'undefined'
+                        ? _.threadID
+                        : ''
+                )
               )
             )
         )
