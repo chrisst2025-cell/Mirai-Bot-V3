@@ -647,7 +647,16 @@ async function buyItem({ api, event, idItem, Currencies, handleReply }) {
         if (item === 404) return api.sendMessage('⚠️ Không tìm thấy vật phẩm', threadID, messageID)
         if (item === 403)
           return api.sendMessage('❎ Bạn đã sở hữu vật phẩm này từ trước', threadID, messageID)
-        api.unsendMessage(handleReply.messageID, typeof event !== "undefined" ? event.threadID : (typeof e !== "undefined" ? e.threadID : (typeof _ !== "undefined" ? _.threadID : "")))
+        api.unsendMessage(
+          handleReply.messageID,
+          typeof event !== 'undefined'
+            ? event.threadID
+            : typeof e !== 'undefined'
+              ? e.threadID
+              : typeof _ !== 'undefined'
+                ? _.threadID
+                : ''
+        )
         var stream = (
           await axios.get(handleReply.data[idItem - 1].image, { responseType: 'stream' })
         ).data
@@ -675,7 +684,16 @@ async function buyItem({ api, event, idItem, Currencies, handleReply }) {
         )
         const food = set.buyItem(senderID, handleReply.data[idItem - 1])
         if (food === 404) return api.sendMessage('⚠️ Không tìm thấy vật phẩm', threadID, messageID)
-        api.unsendMessage(handleReply.messageID, typeof event !== "undefined" ? event.threadID : (typeof e !== "undefined" ? e.threadID : (typeof _ !== "undefined" ? _.threadID : "")))
+        api.unsendMessage(
+          handleReply.messageID,
+          typeof event !== 'undefined'
+            ? event.threadID
+            : typeof e !== 'undefined'
+              ? e.threadID
+              : typeof _ !== 'undefined'
+                ? _.threadID
+                : ''
+        )
         var stream = (
           await axios.get(handleReply.data[idItem - 1].image, { responseType: 'stream' })
         ).data
@@ -706,7 +724,16 @@ async function buyItem({ api, event, idItem, Currencies, handleReply }) {
         const upgrade = set.buyItem(senderID, handleReply.data[idItem - 1])
         if (upgrade === 404)
           return api.sendMessage('⚠️ Không tìm thấy vật phẩm', threadID, messageID)
-        api.unsendMessage(handleReply.messageID, typeof event !== "undefined" ? event.threadID : (typeof e !== "undefined" ? e.threadID : (typeof _ !== "undefined" ? _.threadID : "")))
+        api.unsendMessage(
+          handleReply.messageID,
+          typeof event !== 'undefined'
+            ? event.threadID
+            : typeof e !== 'undefined'
+              ? e.threadID
+              : typeof _ !== 'undefined'
+                ? _.threadID
+                : ''
+        )
         var stream = (
           await axios.get(handleReply.data[idItem - 1].image, { responseType: 'stream' })
         ).data
@@ -742,7 +769,16 @@ async function buyItem({ api, event, idItem, Currencies, handleReply }) {
           })
           fs.writeFileSync(`${__dirname}/data/datauser.json`, JSON.stringify(dataGlobal, null, 4))
         }
-        api.unsendMessage(handleReply.messageID, typeof event !== "undefined" ? event.threadID : (typeof e !== "undefined" ? e.threadID : (typeof _ !== "undefined" ? _.threadID : "")))
+        api.unsendMessage(
+          handleReply.messageID,
+          typeof event !== 'undefined'
+            ? event.threadID
+            : typeof e !== 'undefined'
+              ? e.threadID
+              : typeof _ !== 'undefined'
+                ? _.threadID
+                : ''
+        )
         await Currencies.increaseMoney(event.senderID, parseInt(moneySell, 10))
         return api.sendMessage(
           `✅ Bạn đã bán thành công ${num} quái vật và nhận được ${moneySell} đô`,
@@ -766,7 +802,16 @@ async function setItem({ api, event, handleReply }) {
   if (!dataUser) return api.sendMessage('❎ Bạn chưa có nhân vật', threadID, messageID)
   if (!event.body) return api.sendMessage('❎ Bạn chưa nhập ID vật phẩm', threadID, messageID)
   set.setItem(senderID, weapon)
-  api.unsendMessage(handleReply.messageID, typeof event !== "undefined" ? event.threadID : (typeof e !== "undefined" ? e.threadID : (typeof _ !== "undefined" ? _.threadID : "")))
+  api.unsendMessage(
+    handleReply.messageID,
+    typeof event !== 'undefined'
+      ? event.threadID
+      : typeof e !== 'undefined'
+        ? e.threadID
+        : typeof _ !== 'undefined'
+          ? _.threadID
+          : ''
+  )
   var stream = (
     await axios.get(
       weapon.type === 'weapon' ? global.configMonster.setWeapon : global.configMonster.eatGif,
@@ -847,7 +892,16 @@ async function increaseDurability({ api, event, Currencies, handleReply }) {
     await Currencies.decreaseMoney(event.senderID, parseInt(event.body, 10))
     if (item === 404)
       return api.sendMessage('⚠️ Không tìm thấy vật phẩm', event.threadID, event.messageID)
-    api.unsendMessage(handleReply.messageID, typeof event !== "undefined" ? event.threadID : (typeof e !== "undefined" ? e.threadID : (typeof _ !== "undefined" ? _.threadID : "")))
+    api.unsendMessage(
+      handleReply.messageID,
+      typeof event !== 'undefined'
+        ? event.threadID
+        : typeof e !== 'undefined'
+          ? e.threadID
+          : typeof _ !== 'undefined'
+            ? _.threadID
+            : ''
+    )
     return api.sendMessage(
       `✅ Đã gia tăng độ bền thành công, độ bền hiện tại của vật phẩm là ${item}`,
       event.threadID,
@@ -871,7 +925,16 @@ async function increaseHp({ api, event, handleReply }) {
     set.decreasePoints(event.senderID, event.body)
     if (item === 404)
       return api.sendMessage('⚠️ Không tìm thấy vật phẩm', event.threadID, event.messageID)
-    api.unsendMessage(handleReply.messageID, typeof event !== "undefined" ? event.threadID : (typeof e !== "undefined" ? e.threadID : (typeof _ !== "undefined" ? _.threadID : "")))
+    api.unsendMessage(
+      handleReply.messageID,
+      typeof event !== 'undefined'
+        ? event.threadID
+        : typeof e !== 'undefined'
+          ? e.threadID
+          : typeof _ !== 'undefined'
+            ? _.threadID
+            : ''
+    )
     return api.sendMessage(
       `✅ Đã gia tăng ${event.body * 5} điểm vào HP, tổng HP là ${item}`,
       event.threadID,
@@ -895,7 +958,16 @@ async function increaseDef({ api, event, handleReply }) {
     set.decreasePoints(event.senderID, event.body)
     if (item === 404)
       return api.sendMessage('⚠️ Không tìm thấy vật phẩm', event.threadID, event.messageID)
-    api.unsendMessage(handleReply.messageID, typeof event !== "undefined" ? event.threadID : (typeof e !== "undefined" ? e.threadID : (typeof _ !== "undefined" ? _.threadID : "")))
+    api.unsendMessage(
+      handleReply.messageID,
+      typeof event !== 'undefined'
+        ? event.threadID
+        : typeof e !== 'undefined'
+          ? e.threadID
+          : typeof _ !== 'undefined'
+            ? _.threadID
+            : ''
+    )
     return api.sendMessage(
       `✅ Đã gia tăng ${event.body * 2} điểm vào DEF, tổng DEF là ${item}`,
       event.threadID,
@@ -919,7 +991,16 @@ async function increaseAtk({ api, event, handleReply }) {
     set.decreasePoints(event.senderID, event.body)
     if (item === 404)
       return api.sendMessage('❎ Không tìm thấy vật phẩm', event.threadID, event.messageID)
-    api.unsendMessage(handleReply.messageID, typeof event !== "undefined" ? event.threadID : (typeof e !== "undefined" ? e.threadID : (typeof _ !== "undefined" ? _.threadID : "")))
+    api.unsendMessage(
+      handleReply.messageID,
+      typeof event !== 'undefined'
+        ? event.threadID
+        : typeof e !== 'undefined'
+          ? e.threadID
+          : typeof _ !== 'undefined'
+            ? _.threadID
+            : ''
+    )
     return api.sendMessage(
       `✅ Đã gia tăng ${event.body * 2} điểm vào ATK, tổng ATK là ${item}`,
       event.threadID,
@@ -943,7 +1024,16 @@ async function increaseSpd({ api, event, handleReply }) {
     set.decreasePoints(event.senderID, event.body)
     if (item === 404)
       return api.sendMessage('⚠️ Không tìm thấy vật phẩm', event.threadID, event.messageID)
-    api.unsendMessage(handleReply.messageID, typeof event !== "undefined" ? event.threadID : (typeof e !== "undefined" ? e.threadID : (typeof _ !== "undefined" ? _.threadID : "")))
+    api.unsendMessage(
+      handleReply.messageID,
+      typeof event !== 'undefined'
+        ? event.threadID
+        : typeof e !== 'undefined'
+          ? e.threadID
+          : typeof _ !== 'undefined'
+            ? _.threadID
+            : ''
+    )
     return api.sendMessage(
       `✅ Đã gia tăng ${event.body} điểm vào SPD, tổng SPD là ${item}`,
       event.threadID,
@@ -1297,7 +1387,16 @@ function setLocationID({ api, event, handleReply }) {
   const location = require('./data/monster.json')[locationID]
   if (!location) return api.sendMessage('⚠️ Không tìm thấy khu vực', threadID, messageID)
   set.setLocation(senderID, String(locationID))
-  api.unsendMessage(handleReply.messageID, typeof event !== "undefined" ? event.threadID : (typeof e !== "undefined" ? e.threadID : (typeof _ !== "undefined" ? _.threadID : "")))
+  api.unsendMessage(
+    handleReply.messageID,
+    typeof event !== 'undefined'
+      ? event.threadID
+      : typeof e !== 'undefined'
+        ? e.threadID
+        : typeof _ !== 'undefined'
+          ? _.threadID
+          : ''
+  )
   return api.sendMessage(`✅ Đã đến khu vực ${location.location}`, threadID, messageID)
 }
 

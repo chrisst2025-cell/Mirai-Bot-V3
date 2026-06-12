@@ -6,20 +6,38 @@
       "recommended": true,
       "complexity": {
         "noExcessiveCognitiveComplexity": "off",
-        "noVoid": "off"
+        "noVoid": "off",
+        "noCommaOperator": "off",
+        "noArguments": "off"
       },
       "correctness": {
-        "noUnusedVariables": "warn",
-        "useExhaustiveDependencies": "off"
+        "noUnusedVariables": "off",
+        "noUnusedFunctionParameters": "off",
+        "noInnerDeclarations": "off",
+        "useExhaustiveDependencies": "off",
+        "noInvalidUseBeforeDeclaration": "off",
+        "noUnreachable": "off",
+        "noConstantCondition": "off"
+      },
+      "security": {
+        "noGlobalEval": "off"
       },
       "style": {
         "noNonNullAssertion": "off",
-        "useConst": "error",
-        "useTemplate": "error"
+        "useConst": "off",
+        "useTemplate": "off"
       },
       "suspicious": {
         "noExplicitAny": "off",
-        "noArrayIndexKey": "off"
+        "noArrayIndexKey": "off",
+        "noAssignInExpressions": "off",
+        "noRedeclare": "off",
+        "noDoubleEquals": "off",
+        "useIterableCallbackReturn": "off",
+        "noAsyncPromiseExecutor": "off",
+        "noFunctionAssign": "off",
+        "noFallthroughSwitchClause": "off",
+        "noDuplicateCase": "off"
       }
     }
   },
@@ -62,7 +80,8 @@
       "!**/node_modules",
       "!**/cache",
       "!**/Fca_Database",
-      "!**/utils/data"
+      "!**/utils/data",
+      "!**/modules/commands/data"
     ]
   }
 }

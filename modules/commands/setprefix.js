@@ -82,7 +82,7 @@ module.exports.run = async ({ api, event, args, Threads }) => {
 }
 
 module.exports.handleEvent = async ({ api, event, Threads }) => {
-  if (!event.body || event.body.toLowerCase() !== 'prefix') {
+  if (event.body?.toLowerCase() !== 'prefix') {
     return
   }
   const { threadID, messageID } = event
