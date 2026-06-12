@@ -58,7 +58,17 @@ Sau đây là các bước cơ bản để có thể cài đặt và vận hành
     - Bạn có thể sử dụng cookie từ extension, hoặc f12 lên để lấy cookie
     - Tạo file cookie.txt và paste cookie vào, save để lưu
       
-6. Chạy bot và tận hưởng
+6. Cấu hình Chatbot AI (Gemini)
+    1. Truy cập vào [Google AI Studio](https://aistudio.google.com/) để lấy API Key miễn phí.
+    2. Mở file lệnh AI (ví dụ: `modules/commands/trucly.js` hoặc `modules/commands/bang.js`) và điền các API Key vào mảng `API_KEYS`:
+       ```javascript
+       const API_KEYS = [
+         "AIzaSyYourKey1...",
+         "AIzaSyYourKey2..."
+       ];
+       ```
+      
+7. Chạy bot và tận hưởng
     1. Nhập
     ```sh
       npm start
