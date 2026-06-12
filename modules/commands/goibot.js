@@ -65,10 +65,10 @@ let model = genAI.getGenerativeModel({ model: MODEL_NAME, generationConfig, safe
 const MAX_HISTORY = 10;
 const chatHistories = {};
 const chatInstances = {};
-const dataDir = path.join(__dirname, "data");
+const dataDir = path.join(__dirname, "data", "config", "bot");
 if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
 const dataFile = path.join(dataDir, "goibot.json");
-const historyFile = path.join(dataDir, "bang-history.json");
+const historyFile = path.join(dataDir, "history.json");
 if (!fs.existsSync(dataFile)) fs.writeFileSync(dataFile, JSON.stringify({}));
 if (!fs.existsSync(historyFile)) fs.writeFileSync(historyFile, JSON.stringify({}));
 
