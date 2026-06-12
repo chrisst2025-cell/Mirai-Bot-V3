@@ -1,91 +1,174 @@
-# Mirai Bot Unofficial🤖<sub><sub>v3.0.0🚀</sub></sub>
-<p align="center">
-    <a href="https://nodejs.org/dist/v20.17.0"><img src="https://img.shields.io/badge/Nodejs%20Support-20.x-brightgreen.svg?style=flat-square" alt="Nodejs Support v20.x"></a>
-    <img alt="size" src="https://img.shields.io/github/repo-size/DongDev-VN/Mirai-Bot-V3.svg?style=flat-square&label=size">
-    <img alt="code-version" src="https://img.shields.io/badge/dynamic/json?color=red&label=code%20version&prefix=v&query=%24.version&url=https://raw.githubusercontent.com/DongDev-VN/Mirai-Bot-V3/refs/heads/main/package.json&style=flat-square">
-    <a href="https://github.com/DongDev-VN/Mirai-Bot-V3/commits"><img alt="Commits" src="https://img.shields.io/github/commit-activity/m/DongDev-VN/Mirai-Bot-V3.svg?label=commit&style=flat-square"></a>
-<img alt="Visitors" src="https://visitor-badge.laobi.icu/badge?page_id=DongDev-VN.Mirai-Bot-V3">
-<img alt="size" src="https://img.shields.io/badge/license-GPL--3.0-green?style=flat-square&color=brightgreen">
-<a href="https://github.com/DongDev-VN/Mirai-Bot-V3"><img src="https://i.imgur.com/sxW5AWa.png" alt="Logo"></a>
-<p align="center">
-    A Simple MiraiBot for starting a Messenger Chatbot.
-    <br />
-    <br />
-    
-## 📝 **introduce**
-<p>
-<strong>Mirai Bot V3 Unofficial</strong> Là một dự án được DongDev update và tiếp tục phát triển từ project Mirai-V2 của Catalizcs and SpermLord xây dựng.
-</p>
+<div align="center">
 
-## 📜 **Installation**
+```
+███╗   ███╗██╗██████╗  █████╗ ██╗            ██████╗  ██████╗ ████████╗            ██╗   ██╗██████╗ 
+████╗ ████║██║██╔══██╗██╔══██╗██║            ██╔══██╗██╔═══██╗╚══██╔══╝            ██║   ██║╚════██╗
+██╔████╔██║██║██████╔╝███████║██║   █████╗   ██████╔╝██║   ██║   ██║      █████╗   ██║   ██║ █████╔╝
+██║╚██╔╝██║██║██╔══██╗██╔══██║██║   ╚════╝   ██╔══██╗██║   ██║   ██║      ╚════╝   ╚██╗ ██╔╝ ╚═══██╗
+██║ ╚═╝ ██║██║██║  ██║██║  ██║██║            ██████╔╝╚██████╔╝   ██║               ╚████╔╝ ██████╔╝
+╚═╝     ╚═╝╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝            ╚═════╝  ╚═════╝    ╚═╝                ╚═══╝  ╚═════╝ 
+```
 
-Sau đây là các bước cơ bản để có thể cài đặt và vận hành.
+### ✦ Messenger Chatbot Framework — Unofficial ✦
 
-### 💡 **Yêu cầu**
+<br/>
 
-- Dung lượng của máy phải trống tầm 1-2gb.
-- Cần một số phần mềm chỉnh sửa file, khuyến khích sử dụng [notepad++](https://notepad-plus-plus.org/downloads/) hoặc [sublime text 3](https://www.sublimetext.com/3)
-- Cần hiểu biết sơ lược qua về node, javascript.
-- Một tài khoản Facebook dùng để làm bot(Khuyến khích nên sử dụng acc đã bỏ hoặc không còn sử dụng để tránh mất acc hay acc bị khoá).
-- Đối với:
-    - Windows: Cần cài đặt windows-build-tools.
-    - Linux: Cần cài đặt python3 hoặc python2.
-    - Android Sử dụng termux để vận hành bot.
+[![Node.js](https://img.shields.io/badge/Node.js-20.x-43853d?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/dist/v20.17.0)
+[![Version](https://img.shields.io/badge/version-3.0.0-blueviolet?style=for-the-badge&logo=github&logoColor=white)](https://github.com/DongDev-VN/Mirai-Bot-V3)
+[![License](https://img.shields.io/badge/license-GPL--3.0-22c55e?style=for-the-badge)](LICENSE)
+[![Commits](https://img.shields.io/github/commit-activity/m/DongDev-VN/Mirai-Bot-V3?style=for-the-badge&color=f59e0b&label=commits)](https://github.com/DongDev-VN/Mirai-Bot-V3/commits)
+[![Size](https://img.shields.io/github/repo-size/DongDev-VN/Mirai-Bot-V3?style=for-the-badge&color=3b82f6)](https://github.com/DongDev-VN/Mirai-Bot-V3)
 
-### ⚙️ **Cài Đặt**
+<br/>
 
-1. Tải về [Nodejs](https://nodejs.org/en/) và [git](https://git-scm.com/) sau đó cài đặt
-2. Clone source code của bot
-    1. chuột phải ở folder cần cài đặt source code nhấn vào git bash
-    2. nhập
-    ```sh
-    git clone https://github.com/DongDev-VN/Mirai-Bot-V3 Mirai-Bot-V3
-    ```
-    
-3. Cài đặt các package cần thiết
-    1. Mở cmd/terminal ở thư mục bot, LƯU Ý thư mục đó phải có file package.json
-    2. Nhập
-    ```sh
-    npm install
-    ```
-    
-4. Chỉnh sửa file config
-    1. Mở file config.json thông qua notepad++ hoặc sublime text 3 đã cài đặt ở trên
-    2. tùy chỉnh id admin, tên bot, ...
-    3. Sao lưu và đóng lại
-    
-5. Lấy cookie
-    - Bạn có thể sử dụng cookie từ extension, hoặc f12 lên để lấy cookie
-    - Tạo file cookie.txt và paste cookie vào, save để lưu
-      
-6. Cấu hình Chatbot AI (Gemini)
-    1. Truy cập vào [Google AI Studio](https://aistudio.google.com/) để lấy API Key miễn phí.
-    2. Mở file lệnh AI (ví dụ: `modules/commands/goibot.js`) và điền các API Key vào mảng `API_KEYS`:
-       ```javascript
-       const API_KEYS = [
-         "AIzaSyYourKey1...",
-         "AIzaSyYourKey2..."
-       ];
-       ```
-      
-7. Chạy bot và tận hưởng
-    1. Nhập
-    ```sh
-      npm start
-      ```
-    2. Đợi source code load file và tận hưởng!
+> *Một framework chatbot Messenger đơn giản, mạnh mẽ và dễ mở rộng*  
+> *Built on top of Mirai-V2 · Maintained by DongDev*
 
-## 📚 **Contributing**
+<br/>
 
-Sự đóng góp của bạn sẽ khiến cho project ngày càng tốt hơn, các bước để bạn có thể đóng góp
+</div>
 
-1. Fork project này
-2. Tạo một branch mới chứa tính năng của bạn (`git checkout -b feature/AmazingFeature`)
-3. Commit những gì bạn muốn đóng góp (`git commit -m 'Add some AmazingFeature'`)
-4. Đẩy branch chứa tính năng của bạn lên (`git push origin feature/AmazingFeature`)
-5. Tạo một pull request mới và sự đóng góp của bạn đã sẵn sàng để có thể đóng góp!
+---
 
-<!-- CONTACT -->
-## ☎️ **Contact**
+## 🌟 Giới thiệu
 
-- DongDev - [Facebook](https://facebook.com/minhdong.dev) - [GitHub](https://github.com/DongDev-VN) - dongdz.user@gmail.com
+**Mirai Bot V3 Unofficial** là dự án được **DongDev** tiếp tục phát triển từ nền tảng **Mirai-V2** của *Catalizcs* và *SpermLord*, được mod lại bởi **Vuiz**.
+
+Framework cung cấp nền tảng vững chắc để xây dựng chatbot Messenger với hệ thống module linh hoạt, hỗ trợ AI (Gemini), phát nhạc, quản lý nhóm và nhiều tính năng khác.
+
+---
+
+## 📋 Yêu cầu hệ thống
+
+| Yêu cầu | Chi tiết |
+|---|---|
+| 💾 Dung lượng trống | Tối thiểu **1–2 GB** |
+| ⚙️ Runtime | **Node.js v20.x** |
+| 📝 Text editor | [Notepad++](https://notepad-plus-plus.org/) hoặc [Sublime Text 3](https://www.sublimetext.com/3) |
+| 🧠 Kiến thức | Cơ bản về Node.js & JavaScript |
+| 🤖 Tài khoản Facebook | Nên dùng tài khoản phụ để tránh rủi ro |
+
+<details>
+<summary><b>Yêu cầu theo nền tảng</b></summary>
+
+<br/>
+
+| Nền tảng | Yêu cầu thêm |
+|---|---|
+| 🪟 Windows | `windows-build-tools` |
+| 🐧 Linux | `python3` hoặc `python2` |
+| 📱 Android | [Termux](https://termux.dev/) |
+
+</details>
+
+---
+
+## 🚀 Cài đặt
+
+### Bước 1 — Chuẩn bị môi trường
+
+Tải và cài đặt [Node.js](https://nodejs.org/en/) và [Git](https://git-scm.com/).
+
+### Bước 2 — Clone source code
+
+```sh
+git clone https://github.com/vuinguyen16003069/Mirai-Bot-V3.git
+cd Mirai-Bot-V3
+```
+
+### Bước 3 — Cài đặt dependencies
+
+```sh
+npm install
+```
+
+### Bước 4 — Cấu hình bot
+
+Mở `config.json` và chỉnh sửa thông tin:
+
+```json
+{
+  "bot": {
+    "name": "Tên bot của bạn",
+    "adminID": ["your_admin_id_here"]
+  }
+}
+```
+
+### Bước 5 — Lấy cookie Facebook
+
+1. Đăng nhập Facebook trên trình duyệt
+2. Mở DevTools (F12) → tab **Network** hoặc dùng extension
+3. Sao chép cookie và lưu vào `cookie.txt`
+
+> ⚠️ **Khuyến nghị:** Dùng tài khoản phụ để tránh bị khoá tài khoản chính.
+
+### Bước 6 — Cấu hình Gemini AI *(tuỳ chọn)*
+
+1. Truy cập [Google AI Studio](https://aistudio.google.com/) để lấy API Key miễn phí
+2. Mở file lệnh AI (`modules/commands/goibot.js`) và điền key:
+
+```js
+const API_KEYS = [
+  "AIzaSyYourFirstKey...",
+  "AIzaSyYourSecondKey...",  // Thêm nhiều key để tránh giới hạn rate
+];
+```
+
+### Bước 7 — Khởi chạy 🎉
+
+```sh
+npm start
+```
+
+Đợi bot load xong và tận hưởng!
+
+---
+
+## 📁 Cấu trúc thư mục
+
+```
+Mirai-Bot-V3/
+├── 📂 modules/
+│   ├── 📂 commands/       ← Các lệnh bot
+│   └── 📂 events/         ← Xử lý sự kiện
+├── 📂 data/               ← Dữ liệu runtime
+├── 📄 config.json         ← Cấu hình chính
+├── 📄 cookie.txt          ← Cookie đăng nhập
+├── 📄 index.js            ← Entry point
+└── 📄 package.json
+```
+
+---
+
+## 🤝 Đóng góp
+
+Mọi đóng góp đều được hoan nghênh và trân trọng! 💙
+
+```
+1. Fork repo này
+2. Tạo branch mới       git checkout -b feature/TinhNangCuaBan
+3. Commit thay đổi      git commit -m 'feat: thêm tính năng X'
+4. Push lên branch      git push origin feature/TinhNangCuaBan
+5. Mở Pull Request 🎉
+```
+
+---
+
+## ☎️ Liên hệ
+
+<div align="center">
+
+**DongDev**
+
+[![Facebook](https://img.shields.io/badge/Facebook-1877f2?style=for-the-badge&logo=facebook&logoColor=white)](https://facebook.com/minhdong.dev)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/DongDev-VN)
+[![Email](https://img.shields.io/badge/Email-ea4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:dongdz.user@gmail.com)
+
+<br/>
+
+---
+
+<sub>Made with ❤️ by DongDev · GPL-3.0 License</sub>
+
+</div>
