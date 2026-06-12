@@ -147,7 +147,7 @@ function onBot({ models }) {
     const userName = user[userId]?.name || null
     logger(`Đăng nhập thành công - ${userName} (${userId})`, '[ LOGIN ] >')
     console.log(
-      require('chalk').default.yellow(
+      require('chalk').yellow(
         ' __  __ ___ ____      _    ___      ____   ___ _____  __     _______' +
           '\n' +
           '|  \\/  |_ _|  _ \\    / \\  |_ _|    | __ ) / _ \\_   _| \\ \\   / /___ / ' +
