@@ -21,11 +21,11 @@
   "commandDisabled": [],
   "eventDisabled": [],
   "FACEBOOK_ADMIN": "",
-  "BOTNAME": "Mirai-v3-Unofficial",
-  "PREFIX": "!",
+  "BOTNAME": "minato",
+  "PREFIX": ".",
   "BOXADMIN": "",
-  "ADMINBOT": ["100068919862952"],
-  "NDH": ["100068919862952"],
+  "ADMINBOT": ["61568806302361"],
+  "NDH": ["61568806302361"],
   "version": "3.0.0",
   "menu": {
     "autoUnsend": {
